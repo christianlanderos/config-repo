@@ -4,7 +4,7 @@ spring.datasource.platform: "mysql"
 spring.database.driverClassName: "com.mysql.jdbc.Driver"
 spring.datasource.url: "jdbc:mysql://localhost:3306/notes_app?useSSL=false"
 spring.datasource.username: "landeros"
-spring.datasource.password: "lwolverineL5"
+spring.datasource.password: "9d0c276de4252fcbc180852183e88486c9f522e5c50fe18cdab434d613af5f10"
 spring.datasource.testWhileIdle: "true"
 spring.datasource.validationQuery: "SELECT 1"
 
