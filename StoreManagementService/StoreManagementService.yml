@@ -1,0 +1,16 @@
+tracer.property: "I AM THE DEFAULT ENVIRONMENT FOR STORE MANAGEMENT SERVICE"
+
+spring.datasource.platform: "mysql"
+spring.database.driverClassName: "com.mysql.jdbc.Driver"
+spring.datasource.url: "jdbc:mysql://localhost:3306/sics_db?useSSL=false&serverTimezone=UTC"
+spring.datasource.username: "landeros"
+spring.datasource.password: "{cipher}9d0c276de4252fcbc180852183e88486c9f522e5c50fe18cdab434d613af5f10"
+spring.datasource.testWhileIdle: "true"
+spring.datasource.validationQuery: "SELECT 1"
+
+#Autodetected by default
+#spring.jpa.database: "MYSQL"
+spring.jpa.show-sql: "true"
+spring.jpa.properties.hibernate.dialect: "org.hibernate.dialect.MySQL5InnoDBDialect"
+# Hibernate ddl auto (create, create-drop, validate, update)
+spring.jpa.hibernate.ddl-auto: "update"
