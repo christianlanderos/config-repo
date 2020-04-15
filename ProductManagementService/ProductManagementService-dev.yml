@@ -33,7 +33,7 @@ circuitBreaker:
   errorThresholdPercentage: 50
   sleepWindowInMilliseconds: 5000
 metrics:
-  rollingStats
+  rollingStats:
     timeInMilliseconds: 10000
     numBuckets: 10
 threadPoolProperties:
