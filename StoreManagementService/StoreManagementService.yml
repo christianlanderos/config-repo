@@ -32,6 +32,6 @@ hystrix:
   sleepWindowInMilliseconds: 5000
   timeInMilliseconds: 10000
   numBuckets: 10
-  # threadPoolProperties:
+  # threadPoolProperties
   coreSize: 30
   maxQueueSize: 10
