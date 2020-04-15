@@ -20,11 +20,14 @@ spring:
       hibernate:
         dialect: "org.hibernate.dialect.MySQL5InnoDBDialect"
     # Hibernate ddl auto (create, create-drop, validate, update)
-    hibernate
+    hibernate:
       ddl-auto: "update"
 
 # HYSTRIX CONFIGURATION
-execution.isolation.thread.timeoutInMilliseconds: 1000
+execution:
+  isolation:
+    thread:
+      timeoutInMilliseconds: 1000
 circuitBreaker:
   requestVolumeThreshold: 20
   errorThresholdPercentage: 50
