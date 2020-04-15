@@ -1,16 +1,38 @@
-tracer.property: "I AM THE DEVELOPMENT ENVIRONMENT FOR PRODUCT MANAGEMENT SERVICE"
+tracer:
+  property: "I AM THE DEVELOPMENT ENVIRONMENT FOR PRODUCT MANAGEMENT SERVICE"
 
-spring.datasource.platform: "mysql"
-spring.database.driverClassName: "com.mysql.jdbc.Driver"
-spring.datasource.url: "jdbc:mysql://localhost:3306/sics_db?useSSL=false&serverTimezone=UTC"
-spring.datasource.username: "landeros"
-spring.datasource.password: "{cipher}9d0c276de4252fcbc180852183e88486c9f522e5c50fe18cdab434d613af5f10"
-spring.datasource.testWhileIdle: "true"
-spring.datasource.validationQuery: "SELECT 1"
+# DATA BASE CONFIGURATION
+spring:
+  database:
+    driverClassName: "com.mysql.jdbc.Driver"
+  datasource:
+    platform: "mysql"
+    url: "jdbc:mysql://localhost:3306/sics_db?useSSL=false&serverTimezone=UTC"
+    username: "landeros"
+    password: "{cipher}9d0c276de4252fcbc180852183e88486c9f522e5c50fe18cdab434d613af5f10"
+    testWhileIdle: "true"
+    validationQuery: "SELECT 1"
+  
+  jpa:
+    database: "MYSQL"
+    show-sql: "true"
+    properties:
+	  hibernate:
+	    dialect: "org.hibernate.dialect.MySQL5InnoDBDialect"
+    # Hibernate ddl auto (create, create-drop, validate, update)
+    hibernate
+	  ddl-auto: "update"
 
-#Autodetected by default
-#spring.jpa.database: "MYSQL"
-spring.jpa.show-sql: "true"
-spring.jpa.properties.hibernate.dialect: "org.hibernate.dialect.MySQL5InnoDBDialect"
-# Hibernate ddl auto (create, create-drop, validate, update)
-spring.jpa.hibernate.ddl-auto: "update"
+# HYSTRIX CONFIGURATION
+execution.isolation.thread.timeoutInMilliseconds: 1000
+circuitBreaker:
+  requestVolumeThreshold: 20
+  errorThresholdPercentage: 50
+  sleepWindowInMilliseconds: 5000
+metrics:
+  rollingStats
+    timeInMilliseconds: 10000
+	numBuckets: 10
+threadPoolProperties:
+  coreSize: 30
+  maxQueueSize: 10
