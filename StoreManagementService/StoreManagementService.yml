@@ -25,13 +25,13 @@ spring:
 
 # HYSTRIX CONFIGURATION
 hystrix:
-  timeoutInMilliseconds: 1000
-  # circuitBreaker
-  requestVolumeThreshold: 20
-  errorThresholdPercentage: 50
-  sleepWindowInMilliseconds: 5000
-  timeInMilliseconds: 10000
-  numBuckets: 10
-  # threadPoolProperties
-  coreSize: 30
-  maxQueueSize: 10
+  command:
+    # Valores globales para toda la aplicacion, para los metodos con la anotacion @HystrixCommand
+    default:
+      execution.isolation.thread.timeoutInMilliseconds: 1000
+      circuitBreaker.requestVolumeThreshold: 20
+      circuitBreaker.errorThresholdPercentage: 50
+      circuitBreaker.sleepWindowInMilliseconds: 5000
+      metrics.rollingStats.timeInMilliseconds: 10000
+      metrics.rollingStats.numBuckets: 10
+    
