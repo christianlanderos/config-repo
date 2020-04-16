@@ -39,5 +39,5 @@ hystrix:
       execution.isolation.thread.timeoutInMilliseconds: 100
   threadpool:
       saveProductInStoreThreadPool:
-      coreSize: 30
-      maxQueueSize: 10
+        coreSize: 30
+        maxQueueSize: 10
