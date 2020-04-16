@@ -36,7 +36,7 @@ hystrix:
       metrics.rollingStats.numBuckets: 10
     # Especifico para el metodo saveProsuctInStore el cual tiene la anotacion @HystrixCommand
     saveProductInStore:
-      execution.isolation.thread.timeoutInMilliseconds: 100
+      execution.isolation.thread.timeoutInMilliseconds: 1000
   threadpool:
       saveProductInStoreThreadPool:
         coreSize: 30
