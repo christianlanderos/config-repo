@@ -1,0 +1,6 @@
+zuul:
+  ignored-services: '*'
+  prefix: /api
+  routes:
+    productmanagementservice: /product/**
+    storemanagementservice: /store/**
