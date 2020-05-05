@@ -1,6 +1,9 @@
 zuul:
+  sensitiveHeaders: Cookie,Set-Cookie
   ignored-services: '*'
   prefix: /api
   routes:
     productmanagementservice: /product/**
     storemanagementservice: /store/**
+
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 2500
