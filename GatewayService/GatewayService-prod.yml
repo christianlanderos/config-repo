@@ -5,6 +5,6 @@ zuul:
   routes:
     productmanagementservice: /product/**
     storemanagementservice: /store/**
-	usermanagementservice: /user/**
+    usermanagementservice: /user/**
 
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 2500
